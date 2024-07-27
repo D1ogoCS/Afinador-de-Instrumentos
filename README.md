@@ -93,7 +93,24 @@ Depois são executadas algumas operações com base no valor de "selected_option
 
 *Gráfico de frequências em tempo real*
 
+A função de transferência H $(s)$ de um filtro Butterworth de ordem *n* pode ser expressa como:
+
+$$
+\[ H(s) = \frac{1}{\sqrt{1 + \left(\frac{s}{\omega_c}\right)^{2n}}} \]
+$$
+
+onde:
+- $\( s \)$ é a variável complexa,
+- $\( \omega_c \)$ é a frequência de corte,
+- $\( n \)$ é a ordem do filtro.
+
+A frequência de corte $\( \omega_c \)$ é o ponto onde a magnitude da resposta em frequência é 3 dB abaixo do ganho na faixa de passagem.
+Para um filtro Butterworth, as operações matemáticas envolvem manipulação algébrica desta função de transferência. A frequência angular $f$ por $w = 2πf$ está relacionada com a frequência, portanto, a função de transferência também pode ser expressa em termos de $f$ .
+
 ![Ilustração do filtro Butterworth](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/filtroButterworth.png)
 
 *Iustração do filtro Butterworth*
+
+
+Filtros Butterworth de ordens mais altas geralmente apresentam características de resposta em frequência mais acentuadas e abruptas em comparação com ordens mais baixas. Isso pode levar a representações gráficas que parecem desproporcionais ou têm características distintas.
 
