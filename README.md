@@ -3,6 +3,14 @@
 
 Foi proposto realizar um projeto que englobasse uma área de Processamento Digital de Sinais e decidi criar uma aplicação, que tem como função ser um afinador que se adapta ao instrumento musical escolhido pelo utilizador.
 
+### Objetivos:
+- O utilizador deve escolher qual o instrumento musical que quer afinar
+- Ser possível visualizar um gráfico com as frequências que estão a ser capturadas em tempo real
+- Mostrar a frequência que está a ser captada
+- Indicar a nota e a oitava
+- Se o instrumento estiver desafinado, indicar com uma seta para que lado se encontra a nota mais próxima. Se o instrumento estiver afinado, deve aparecer a mensagem "Ok"
+- Utilizar um filtro que foi lecionado durante as aulas de Processamento Digital de Sinais
+
 ### Ferramentas utilizadas:
 - IDLE (Python 3.10 64-bit)
 
