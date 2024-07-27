@@ -73,25 +73,38 @@ Para que o código da aplicação fique mais organizado e não exista repetiçã
 Depois são executadas algumas operações com base no valor de "selected_option". Se "selected_option" for igual a "Notas Gerais", o código percorre o dicionário "notas" e encontra o valor mais próximo da frequência. Se "selected_option" não for igual a "Notas Gerais", o código percorre o dicionário "notas" e encontra a nota que corresponde à frequência fornecida. Se a frequência captada for menor que a frequência exata da nota, a variável "simbolo" é definida como "--->" e a variável "cor" é definida como "red". Se a frequência captada for maior que a frequência exata da nota, a variável "simbolo" é definida como "<---" e a variável "cor" é definida como "red". Caso contrário, a variável "simbolo" é definida como "OK" e a variável "cor" é definida como "green".
 
 ### Resultados:
+Quando a aplicação é executada, uma janela e um gráfico são exibido, que vão mostrando a frequência dos dados filtrados e dos dados originais, do que está a ser captado pelo microfone em tempo real.
+O microfone capta durante 0,5 segundos e guarda o que foi captado num array. Após isso, é necessario converter esse array num array $numpy$ do tipo int16.
+Assim que está em execução, a aplicação calcula a frequência e indica na janela a frequência captada, a oitava e a nota musical.
+
 ![Janela principal](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/janelaPrincipal.png)
 
 *Janela principal*
+
+![Gráfico de frequências em tempo real](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/graficoFrequencias.png)
+
+*Gráfico de frequências em tempo real*
+
+O utilizador pode, através de uma lista, adaptar o programa para vários tipos de instrumentos.
 
 ![Instrumentos disponíveis](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/instrumentosDisponiveis.png)
 
 *Instrumentos disponíveis*
 
-![Nota correta](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/frequenciaCorreta.png)
+Por exemplo, se o utilizador escolher o instrumento musical "Guitarra" e tocar numa corda do instrumento, a aplicação vai analisar o som e descobrir qual é a nota que mais se assemelha ao som captado.
+Depois é indicado se a corda do instrumento se encontra afinada ou não, dependendo da nota musical captada.
 
-*Nota correta*
+Se a seta indicar para a esquerda, significa que a nota se encontra à esquerda, se a seta indicar para a direita, significa que a nota se encontra à direita.
 
 ![Nota incorreta](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/frequenciaErrada.png)
 
 *Nota incorreta*
 
-![Gráfico de frequências em tempo real](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/graficoFrequencias.png)
+Se a frequência da nota musical for a correta, existe uma indicação com a palavra "OK" a cor verde.
 
-*Gráfico de frequências em tempo real*
+![Nota correta](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/frequenciaCorreta.png)
+
+*Nota correta*
 
 A função de transferência H $(s)$ de um filtro Butterworth de ordem *n* pode ser expressa como:
 
@@ -100,8 +113,8 @@ $$
 $$
 
 onde:
-- $\( s \)$ é a variável complexa,
-- $\( \omega_c \)$ é a frequência de corte,
+- $\( s \)$ é a variável complexa;
+- $\( \omega_c \)$ é a frequência de corte;
 - $\( n \)$ é a ordem do filtro.
 
 A frequência de corte $\( \omega_c \)$ é o ponto onde a magnitude da resposta em frequência é 3 dB abaixo do ganho na faixa de passagem.
@@ -110,7 +123,6 @@ Para um filtro Butterworth, as operações matemáticas envolvem manipulação a
 ![Ilustração do filtro Butterworth](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/filtroButterworth.png)
 
 *Iustração do filtro Butterworth*
-
 
 Filtros Butterworth de ordens mais altas geralmente apresentam características de resposta em frequência mais acentuadas e abruptas em comparação com ordens mais baixas. Isso pode levar a representações gráficas que parecem desproporcionais ou têm características distintas.
 
