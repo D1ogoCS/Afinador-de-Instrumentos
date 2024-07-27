@@ -73,7 +73,7 @@ Para que o código da aplicação fique mais organizado e não exista repetiçã
 Depois são executadas algumas operações com base no valor de "selected_option". Se "selected_option" for igual a "Notas Gerais", o código percorre o dicionário "notas" e encontra o valor mais próximo da frequência. Se "selected_option" não for igual a "Notas Gerais", o código percorre o dicionário "notas" e encontra a nota que corresponde à frequência fornecida. Se a frequência captada for menor que a frequência exata da nota, a variável "simbolo" é definida como "--->" e a variável "cor" é definida como "red". Se a frequência captada for maior que a frequência exata da nota, a variável "simbolo" é definida como "<---" e a variável "cor" é definida como "red". Caso contrário, a variável "simbolo" é definida como "OK" e a variável "cor" é definida como "green".
 
 ### Resultados:
-Quando a aplicação é executada, uma janela e um gráfico são exibidos, que vão mostrando a frequência dos dados filtrados e dos dados originais, do que está a ser captado pelo microfone em tempo real.
+Quando a aplicação é executada, uma janela e um gráfico são exibidos e vão mostrando a frequência dos dados filtrados e dos dados originais, do que está a ser captado pelo microfone em tempo real.
 O microfone capta durante 0,5 segundos e guarda o que foi captado num array. Após isso, é necessario converter esse array num array $numpy$ do tipo int16.
 Assim que está em execução, a aplicação calcula a frequência e indica na janela a frequência captada, a oitava e a nota musical.
 
