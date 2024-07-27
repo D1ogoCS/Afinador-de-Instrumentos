@@ -85,7 +85,7 @@ Assim que está em execução, a aplicação calcula a frequência e indica na j
 
 *Gráfico de frequências em tempo real*
 
-O utilizador pode, através de uma lista, adaptar o programa para vários tipos de instrumentos.
+O utilizador pode, através de uma lista, adaptar a aplicação para vários tipos de instrumentos.
 
 ![Instrumentos disponíveis](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/instrumentosDisponiveis.png)
 
