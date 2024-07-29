@@ -74,7 +74,7 @@ Depois são executadas algumas operações com base no valor de "selected_option
 
 ### Resultados:
 Quando a aplicação é executada, uma janela e um gráfico são exibidos e vão mostrando a frequência dos dados filtrados e dos dados originais, do que está a ser captado pelo microfone em tempo real.
-O microfone capta durante 0,5 segundos e guarda o que foi captado num array. Após isso, é necessario converter esse array num array $numpy$ do tipo int16.
+O microfone capta durante 0,5 segundos e guarda o que foi captado num array. Após isso, é necessário converter esse array num array $numpy$ do tipo int16.
 Assim que está em execução, a aplicação calcula a frequência e indica na janela a frequência captada, a oitava e a nota musical.
 
 ![Janela principal](https://github.com/D1ogoCS/Afinador-de-Instrumentos/blob/main/imagens/janelaPrincipal.png)
